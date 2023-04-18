@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Questão 6:
+
+        String parametro = /* insira aqui o seu parametro: */"palavra";
+
+        String palavra1 = "";
+
+        for (int i = parametro.length()-1; i != -1; i --){
+
+            palavra1 = palavra1 + parametro.charAt(i);
+
+        }
+        System.out.println(palavra1);
+
+        //Questão 7:
+
+        int[][] A = new int[2][2];
+
+        A[0][0] = 1;
+        A[0][1] = 2;
+        A[1][0] = 3;
+        A[1][1] = 4;
+
+        float x = A[0][0] * A[1][0];
+        float y = A[0][1] * A[1][1];
+        float z = x - y;
+
+        if (A.length != 2){
+            System.out.println("não é de ordem 2");
+        }
+        else{
+            System.out.println("é de ordem 2");
+        }
+        System.out.println(z);
+
+
+        //Questão 8:
+
+
+        int parametro1 = 3;
+        String strings[] = new String[parametro1];
+        System.out.println("Insira as palavras que deseja concatenar:");
+        Scanner scan = new Scanner(System.in);
+        String concatenacao = "";
+
+        for (int i = 0; i < parametro1; i ++){
+           strings[i] = scan.nextLine();
+            concatenacao = concatenacao + strings[i];
+        }
+
+        System.out.println(concatenacao);
+
+        //Questão 10:
+
+
+        System.out.println("escreva a string que deseja verificar");
+        String verificar = scan.nextLine();
+        String verificar2 = verificar;
+        System.out.println("escreva a palavra que deseja verificar se há na string anterior");
+        String verificando = scan.nextLine();
+
+        if (verificar.replaceAll(verificando,"a") != verificar2){
+            System.out.println("Verdadeiro");
+        }
+        else {
+            System.out.println("Falso");
+        }
+
+    }
+}
